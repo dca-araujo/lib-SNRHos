@@ -1,0 +1,194 @@
+<definitions name='FnrhWs' targetNamespace='http://webservice.ws.snrhos.id2.inf.br/' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://webservice.ws.snrhos.id2.inf.br/' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+ <types>
+  <xs:schema targetNamespace='http://webservice.ws.snrhos.id2.inf.br/' version='1.0' xmlns:tns='http://webservice.ws.snrhos.id2.inf.br/' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:element name='fnrhAtualizar' type='tns:fnrhAtualizar'/>
+   <xs:element name='fnrhAtualizarResponse' type='tns:fnrhAtualizarResponse'/>
+   <xs:element name='fnrhCheckin' type='tns:fnrhCheckin'/>
+   <xs:element name='fnrhCheckinResponse' type='tns:fnrhCheckinResponse'/>
+   <xs:element name='fnrhCheckout' type='tns:fnrhCheckout'/>
+   <xs:element name='fnrhCheckoutResponse' type='tns:fnrhCheckoutResponse'/>
+   <xs:element name='fnrhInserir' type='tns:fnrhInserir'/>
+   <xs:element name='fnrhInserirResponse' type='tns:fnrhInserirResponse'/>
+   <xs:complexType name='fnrhInserir'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='chaveAcesso' type='xs:string'/>
+     <xs:element minOccurs='0' name='fnrh' type='tns:fnrhRequest'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='fnrhRequest'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='bgstdsccidade' type='xs:string'/>
+     <xs:element minOccurs='0' name='bgstdsccidade2' type='xs:string'/>
+     <xs:element minOccurs='0' name='bgstdsccidadedest' type='xs:string'/>
+     <xs:element minOccurs='0' name='bgstdsccidadedest2' type='xs:string'/>
+     <xs:element minOccurs='0' name='bgstdscestado' type='xs:string'/>
+     <xs:element minOccurs='0' name='bgstdscestadodest' type='xs:string'/>
+     <xs:element minOccurs='0' name='bgstdscpais' type='xs:string'/>
+     <xs:element minOccurs='0' name='bgstdscpaisdest' type='xs:string'/>
+     <xs:element minOccurs='0' name='chaveAcesso' type='xs:string'/>
+     <xs:element minOccurs='0' name='noLocalidade' type='xs:string'/>
+     <xs:element minOccurs='0' name='sgUf' type='xs:string'/>
+     <xs:element minOccurs='0' name='sncelularddd' type='xs:string'/>
+     <xs:element minOccurs='0' name='sncelularddi' type='xs:string'/>
+     <xs:element minOccurs='0' name='sncelularnum' type='xs:string'/>
+     <xs:element minOccurs='0' name='sncidaderes' type='xs:string'/>
+     <xs:element minOccurs='0' name='sndtnascimento' type='xs:dateTime'/>
+     <xs:element minOccurs='0' name='snemail' type='xs:string'/>
+     <xs:element minOccurs='0' name='snestadores' type='xs:string'/>
+     <xs:element minOccurs='0' name='snexcluirficha' type='xs:string'/>
+     <xs:element minOccurs='0' name='snidcidadeibge' type='xs:string'/>
+     <xs:element minOccurs='0' name='snidcidadeibgedest' type='xs:string'/>
+     <xs:element minOccurs='0' name='snidcidadeibgeres' type='xs:string'/>
+     <xs:element minOccurs='0' name='snmotreserva' type='xs:string'/>
+     <xs:element minOccurs='0' name='snmotvia' type='xs:string'/>
+     <xs:element minOccurs='0' name='snnacionalidade' type='xs:string'/>
+     <xs:element minOccurs='0' name='snnomecompleto' type='xs:string'/>
+     <xs:element minOccurs='0' name='snnumcpf' type='xs:string'/>
+     <xs:element minOccurs='0' name='snnumdoc' type='xs:string'/>
+     <xs:element minOccurs='0' name='snnumhosp' type='xs:string'/>
+     <xs:element minOccurs='0' name='snobs' type='xs:string'/>
+     <xs:element minOccurs='0' name='snocupacao' type='xs:string'/>
+     <xs:element minOccurs='0' name='snorgexp' type='xs:string'/>
+     <xs:element minOccurs='0' name='snpaisres' type='xs:string'/>
+     <xs:element minOccurs='0' name='snprevent' type='xs:dateTime'/>
+     <xs:element minOccurs='0' name='snprevsai' type='xs:dateTime'/>
+     <xs:element minOccurs='0' name='snresidencia' type='xs:string'/>
+     <xs:element minOccurs='0' name='snsexo' type='xs:string'/>
+     <xs:element minOccurs='0' name='sntelefoneddd' type='xs:string'/>
+     <xs:element minOccurs='0' name='sntelefoneddi' type='xs:string'/>
+     <xs:element minOccurs='0' name='sntelefonenum' type='xs:string'/>
+     <xs:element minOccurs='0' name='sntipdoc' type='xs:string'/>
+     <xs:element minOccurs='0' name='sntiptran' type='xs:string'/>
+     <xs:element minOccurs='0' name='snuhnum' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='fnrhInserirResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='fnrhAtualizar'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='chaveAcesso' type='xs:string'/>
+     <xs:element minOccurs='0' name='snNum' type='xs:string'/>
+     <xs:element minOccurs='0' name='fnrh' type='tns:fnrhRequest'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='fnrhAtualizarResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='fnrhCheckin'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='chaveAcesso' type='xs:string'/>
+     <xs:element minOccurs='0' name='snNum' type='xs:string'/>
+     <xs:element minOccurs='0' name='dataCheckin' type='xs:dateTime'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='fnrhCheckinResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='fnrhCheckout'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='chaveAcesso' type='xs:string'/>
+     <xs:element minOccurs='0' name='snNum' type='xs:string'/>
+     <xs:element minOccurs='0' name='dataCheckout' type='xs:dateTime'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='fnrhCheckoutResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+  </xs:schema>
+ </types>
+ <message name='FnrhWs_fnrhInserir'>
+  <part element='tns:fnrhInserir' name='fnrhInserir'></part>
+ </message>
+ <message name='FnrhWs_fnrhCheckinResponse'>
+  <part element='tns:fnrhCheckinResponse' name='fnrhCheckinResponse'></part>
+ </message>
+ <message name='FnrhWs_fnrhCheckoutResponse'>
+  <part element='tns:fnrhCheckoutResponse' name='fnrhCheckoutResponse'></part>
+ </message>
+ <message name='FnrhWs_fnrhInserirResponse'>
+  <part element='tns:fnrhInserirResponse' name='fnrhInserirResponse'></part>
+ </message>
+ <message name='FnrhWs_fnrhAtualizar'>
+  <part element='tns:fnrhAtualizar' name='fnrhAtualizar'></part>
+ </message>
+ <message name='FnrhWs_fnrhCheckout'>
+  <part element='tns:fnrhCheckout' name='fnrhCheckout'></part>
+ </message>
+ <message name='FnrhWs_fnrhCheckin'>
+  <part element='tns:fnrhCheckin' name='fnrhCheckin'></part>
+ </message>
+ <message name='FnrhWs_fnrhAtualizarResponse'>
+  <part element='tns:fnrhAtualizarResponse' name='fnrhAtualizarResponse'></part>
+ </message>
+ <portType name='FnrhWs'>
+  <operation name='fnrhAtualizar' parameterOrder='fnrhAtualizar'>
+   <input message='tns:FnrhWs_fnrhAtualizar'></input>
+   <output message='tns:FnrhWs_fnrhAtualizarResponse'></output>
+  </operation>
+  <operation name='fnrhCheckin' parameterOrder='fnrhCheckin'>
+   <input message='tns:FnrhWs_fnrhCheckin'></input>
+   <output message='tns:FnrhWs_fnrhCheckinResponse'></output>
+  </operation>
+  <operation name='fnrhCheckout' parameterOrder='fnrhCheckout'>
+   <input message='tns:FnrhWs_fnrhCheckout'></input>
+   <output message='tns:FnrhWs_fnrhCheckoutResponse'></output>
+  </operation>
+  <operation name='fnrhInserir' parameterOrder='fnrhInserir'>
+   <input message='tns:FnrhWs_fnrhInserir'></input>
+   <output message='tns:FnrhWs_fnrhInserirResponse'></output>
+  </operation>
+ </portType>
+ <binding name='FnrhWsBinding' type='tns:FnrhWs'>
+  <soap:binding style='document' transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='fnrhAtualizar'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='fnrhCheckin'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='fnrhCheckout'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='fnrhInserir'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+ </binding>
+ <service name='FnrhWs'>
+  <port binding='tns:FnrhWsBinding' name='FnrhWsPort'>
+   <soap:address location='http://fnrhws.hospedagem.turismo.gov.br/FnrhWs/FnrhWs'/>
+  </port>
+ </service>
+</definitions>
