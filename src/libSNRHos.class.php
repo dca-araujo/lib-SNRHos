@@ -32,7 +32,7 @@ class libSNRHos {
     
     public function setCredenciais($chave)
     {
-        
+        $this->chave = $chave;
     }
     
     public function inserirFicha($ficha)
