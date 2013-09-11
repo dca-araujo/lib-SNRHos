@@ -2,7 +2,7 @@
 /**
  * Biblioteca mínima para atender envios de ficha eletrônica, checkin e checkout
  * de hóspedes
- * @author Airton
+ * @author Airton (about.me/airton airton@hotelpago.com.br)
  */
 class libSNRHos {
     
