@@ -26,8 +26,10 @@ class libSNRHos {
         return $soapClient;
     }
     
-    public function __construct() {
-        
+    public function __construct($sandbox = false) {
+        if($sandbox == true){
+            $this->wsld_url = 'http://localhost:8088/mockwebservice?WSDL';
+        }
     }
     
     public function setCredenciais($chave)
@@ -39,7 +41,7 @@ class libSNRHos {
     {
         try{
             $soapClient = $this->getSoapClient();
-            $soapClient->inserir($ficha);
+            $soapClient->fnrhInserir($ficha);
         }catch(Exception $e){
             throw new Exception('falha ao inserir ficha msg:' . $e->getMessage(), libSNRHos::FalhaInserirFicha);
         }
@@ -49,7 +51,7 @@ class libSNRHos {
     {
         try{
             $soapClient = $this->getSoapClient();
-            $soapClient->atualizar($ficha);
+            $soapClient->fnrhAtualizar($ficha);
         }catch(Exception $e){
             throw new Exception('falha ao atualizar ficha msg:' . $e->getMessage(), libSNRHos::FalhaAtualizarFicha);
         }
@@ -59,7 +61,7 @@ class libSNRHos {
     {
         try{
             $soapClient = $this->getSoapClient();
-            $soapClient->checkin($hospede);
+            return $soapClient->fnrhCheckin($hospede);
         }catch(Exception $e){
             throw new Exception('falha ao informar checkin msg:' . $e->getMessage(), libSNRHos::FalhaCheckin);
         }
@@ -69,11 +71,9 @@ class libSNRHos {
     {
         try{
             $soapClient = $this->getSoapClient();
-            $soapClient->checkout($hospede);
+            $soapClient->fnrhCheckout($hospede);
         }catch(Exception $e){
             throw  new Exception('falha ao informar checkout msg:' . $e->getMessage(), libSNRHos::FalhaCheckout);
         }
     }
 }
-
-
